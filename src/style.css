@@ -88,7 +88,7 @@ button:focus-visible {
   }
 }
 :root {
-  --primary: #172391;
+  --primary: #19a754;
   --business: #3a82ee;
   --personal: var(--primary);
   --light: #eee;
@@ -112,10 +112,26 @@ button:focus-visible {
 input:not([type="radio"]):not([type="checkbox"]),
 button {
   appearance: none;
-  border: none;
+  border: black;
   outline: none;
   background: none;
   cursor: initial;
+  display: block;
+  padding: 0.5rem;
+  font-size: larger;
+}
+
+button.delete {
+  display: block;
+  width: 100%;
+  font-size: 1.125rem;
+  padding: 1rem 1rem;
+  color: #fff;
+  background-color: rgb(176, 57, 57);
+  border-radius: 0.5rem;
+  box-shadow: var(--personal-glow);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 
 body {
@@ -157,7 +173,7 @@ h4 {
 .greeting .title,
 .greeting .title input {
   color: var(--dark);
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
 }
 
@@ -195,6 +211,7 @@ h4 {
 input[type="radio"],
 input[type="checkbox"] {
   display: none;
+  padding: 10px;
 }
 
 .bubble {
@@ -234,6 +251,7 @@ input:checked ~ .bubble::after {
   width: 10px;
   height: 10px;
   opacity: 1;
+  font-size: larger;
 }
 
 .create-todo .options label div {
